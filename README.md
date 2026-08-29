@@ -1,4 +1,3 @@
-Markdown
 # ControlPlane.ai — Enterprise AI Governance Gateway
 
 ControlPlane.ai is a real-time governance, FinOps, and safety layer designed to evaluate Generative AI outputs and intercept risks before they reach end users. Built for multi-use-case enterprise environments, it balances latency budgets and risk tolerances across customer-facing and internal AI applications.
@@ -35,17 +34,7 @@ controlplane-mvp/
 ├── dashboard.py         # Streamlit real-time governance HUD & event audit log
 ├── README.md            # Technical documentation
 └── requirements.txt     # Python dependencies
-Quickstart Guide
-Prerequisites
-Python 3.9 or higher
-
-pip package manager
-
-1. Installation
-Clone the repository, create a virtual environment, and install dependencies:
-
-Bash
-git clone [https://github.com/ce23b049-bit/controlplane-ai-round2.git](https://github.com/ce23b049-bit/controlplane-ai-round2.git)
+git clone https://github.com/ce23b049-bit/controlplane-ai-round2.git
 cd controlplane-mvp
 python -m venv venv
 
@@ -55,26 +44,10 @@ python -m venv venv
 source venv/bin/activate
 
 pip install fastapi uvicorn httpx streamlit pandas
-2. Run the Gateway Server
-Start the FastAPI out-of-band proxy:
-
-Bash
 uvicorn gateway:app --reload --port 8000
-Interactive API documentation is available at http://127.0.0.1:8000/docs.
-
-3. Run the Live Dashboard
-In a secondary terminal window (with the virtual environment activated), start the Streamlit HUD:
-
-Bash
 streamlit run dashboard.py
-Access the live metrics and audit dashboard at http://localhost:8501.
-
-API Usage Example
-Send a POST request to test dynamic routing for different use cases:
-
-Bash
 curl -X 'POST' \
-  '[http://127.0.0.1:8000/v1/chat/customer_support](http://127.0.0.1:8000/v1/chat/customer_support)' \
+  'http://127.0.0.1:8000/v1/chat/customer_support' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
