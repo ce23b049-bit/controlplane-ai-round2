@@ -42,7 +42,6 @@ pip package manager
 
 1. Installation
 Clone the repository, create a virtual environment, and install dependencies:
-Bash
 git clone [https://github.com/ce23b049-bit/controlplane-ai-round2.git](https://github.com/ce23b049-bit/controlplane-ai-round2.git)
 cd controlplane-mvp
 python -m venv venv
@@ -53,6 +52,7 @@ python -m venv venv
 source venv/bin/activate
 
 pip install fastapi uvicorn httpx streamlit pandas
+
 2. Run the Gateway Server
 Start the FastAPI out-of-band proxy:
 
