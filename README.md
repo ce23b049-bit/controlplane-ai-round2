@@ -85,3 +85,8 @@ curl -X 'POST' \
 }'
 
  ```
+### Windows PowerShell Command Alternative
+If you are running the test request in native Windows PowerShell, use the single-line syntax:
+
+```powershell
+curl.exe -X POST "[http://127.0.0.1:8000/v1/chat/customer_support](http://127.0.0.1:8000/v1/chat/customer_support)" -H "accept: application/json" -H "Content-Type: application/json" -d '{\"messages\": [{\"role\": \"user\", \"content\": \"My social security number is 123-45-6789.\"}]}'
