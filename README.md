@@ -35,15 +35,15 @@ controlplane-mvp/
 ├── README.md            # Technical documentation
 └── requirements.txt     # Python dependencies
 ```
-**`## Quickstart Guide`**
-**`### Prerequisites`**
+## Quickstart Guide
+### Prerequisites
 Python 3.9 or higher
 
 pip package manager
 
-**`### 1. Installation`**
+### 1. Installation
 Clone the repository, create a virtual environment, and install dependencies:
-` ```bash `
+```bash
 git clone [https://github.com/ce23b049-bit/controlplane-ai-round2.git](https://github.com/ce23b049-bit/controlplane-ai-round2.git)
 cd controlplane-mvp
 python -m venv venv
@@ -54,23 +54,23 @@ python -m venv venv
 source venv/bin/activate
 
 pip install fastapi uvicorn httpx streamlit pandas
-` ``` `
-**`### 2. Run the Gateway Server`**
+```
+### 2. Run the Gateway Server
 Start the FastAPI out-of-band proxy:
-` ```bash `
+```bash
 uvicorn gateway:app --reload --port 8000
-` ``` `
+```
 Interactive API documentation is available at http://127.0.0.1:8000/docs
-**`### 3. Run the Live Dashboard`**
+### 3. Run the Live Dashboard
 In a secondary terminal window (with the virtual environment activated), start the Streamlit HUD:
-` ```bash `
+```bash
 streamlit run dashboard.py
-` ``` `
+```
 Access the live metrics and audit dashboard at http://localhost:8501.
 
-**`## API Usage Example`**
+## API Usage Example
 Send a POST request to test dynamic routing for different use cases:
-` ```bash `
+```bash
 curl -X 'POST' \
   '[http://127.0.0.1:8000/v1/chat/customer_support](http://127.0.0.1:8000/v1/chat/customer_support)' \
   -H 'accept: application/json' \
@@ -81,6 +81,7 @@ curl -X 'POST' \
       "role": "user",
       "content": "My social security number is 123-45-6789."
     }
-    ` ``` `
   ]
 }'
+
+ ```
