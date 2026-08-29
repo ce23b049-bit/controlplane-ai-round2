@@ -44,7 +44,7 @@ pip package manager
 ### 1. Installation
 Clone the repository, create a virtual environment, and install dependencies:
 ```bash
-git clone [https://github.com/ce23b049-bit/controlplane-ai-round2.git](https://github.com/ce23b049-bit/controlplane-ai-round2.git)
+git clone https://github.com/ce23b049-bit/controlplane-ai-round2.git
 cd controlplane-mvp
 python -m venv venv
 
