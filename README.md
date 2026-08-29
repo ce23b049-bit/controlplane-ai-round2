@@ -72,7 +72,7 @@ Access the live metrics and audit dashboard at http://localhost:8501.
 Send a POST request to test dynamic routing for different use cases:
 ```bash
 curl -X 'POST' \
-  '[http://127.0.0.1:8000/v1/chat/customer_support](http://127.0.0.1:8000/v1/chat/customer_support)' \
+  'http://127.0.0.1:8000/v1/chat/customer_support' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
